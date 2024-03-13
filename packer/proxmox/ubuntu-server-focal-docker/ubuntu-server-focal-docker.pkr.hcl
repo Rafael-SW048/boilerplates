@@ -102,7 +102,7 @@ source "proxmox-iso" "ubuntu-server-focal-docker" {
     # ssh_private_key_file = "~/.ssh/id_rsa"
 
     # Raise the timeout, when installation takes longer
-    ssh_timeout = "20m"
+    ssh_timeout = "40m"
 }
 
 # Build Definition to create the VM Template
