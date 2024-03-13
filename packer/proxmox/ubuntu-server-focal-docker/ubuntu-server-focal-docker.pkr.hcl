@@ -34,7 +34,7 @@ source "proxmox-iso" "ubuntu-server-focal-docker" {
 
     # VM OS Settings
     # (Option 1) Local ISO File
-    iso_file = "local:iso/ubuntu-20.04.4-live-server-amd64.iso"
+    iso_file = "local:iso/ubuntu-22.04.4-live-server-amd64.iso"
     iso_checksum = "45f873de9f8cb637345d6e66a583762730bbea30277ef7b32c9c3bd6700a32b2"
     # - or -
     # (Option 2) Download ISO
