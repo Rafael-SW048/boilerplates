@@ -48,11 +48,11 @@ source "proxmox-iso" "ubuntu-server-focal-docker" {
 
    # VM Hard Disk Settings
     scsi_controller = "virtio-scsi-pci"
-    disk_image_format = "raw"
 
     disks {
         disk_size = "20G"
-        format = "qcow2"
+        // format = "qcow2"
+        format = "raw"
         storage_pool = "local-lvm"
         storage_pool_type = "lvm"
         type = "virtio"
