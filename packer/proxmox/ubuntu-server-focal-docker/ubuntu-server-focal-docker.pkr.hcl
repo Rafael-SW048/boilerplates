@@ -24,17 +24,18 @@ source "proxmox" "ubuntu-server-focal-docker" {
     username = "${var.proxmox_api_token_id}"
     token = "${var.proxmox_api_token_secret}"
     # (Optional) Skip TLS Verification
-    # insecure_skip_tls_verify = true
+    insecure_skip_tls_verify = true
     
     # VM General Settings
-    node = "your-proxmox-node"
-    vm_id = "100"
+    node = "pve"
+    vm_id = "400"
     vm_name = "ubuntu-server-focal-docker"
     template_description = "Ubuntu Server Focal Image with Docker pre-installed"
 
     # VM OS Settings
     # (Option 1) Local ISO File
-    # iso_file = "local:iso/ubuntu-20.04.2-live-server-amd64.iso"
+    iso_file = "local:iso/ubuntu-20.04.2-live-server-amd64.iso"
+    iso_checksum = "45f873de9f8cb637345d6e66a583762730bbea30277ef7b32c9c3bd6700a32b2"
     # - or -
     # (Option 2) Download ISO
     # iso_url = "https://releases.ubuntu.com/20.04/ubuntu-20.04.3-live-server-amd64.iso"
@@ -91,7 +92,7 @@ source "proxmox" "ubuntu-server-focal-docker" {
     # http_port_min = 8802
     # http_port_max = 8802
 
-    ssh_username = "your-user-name"
+    ssh_username = "admin"
 
     # (Option 1) Add your Password here
     # ssh_password = "your-password"
