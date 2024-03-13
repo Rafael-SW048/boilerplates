@@ -46,8 +46,9 @@ source "proxmox-iso" "ubuntu-server-focal-docker" {
     # VM System Settings
     qemu_agent = true
 
-    # VM Hard Disk Settings
+   # VM Hard Disk Settings
     scsi_controller = "virtio-scsi-pci"
+    disk_image_format = "raw"
 
     disks {
         disk_size = "20G"
