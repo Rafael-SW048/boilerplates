@@ -108,7 +108,7 @@ source "proxmox-iso" "ubuntu-server-focal-docker" {
 build {
 
     name = "ubuntu-server-focal-docker"
-    sources = ["source.proxmox.ubuntu-server-focal-docker"]
+    sources = ["source.proxmox-iso.ubuntu-server-focal-docker"]
 
     # Provisioning the VM Template for Cloud-Init Integration in Proxmox #1
     provisioner "shell" {
