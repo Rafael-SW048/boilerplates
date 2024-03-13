@@ -82,7 +82,7 @@ source "proxmox-iso" "ubuntu-server-focal-docker" {
         "<end><bs><bs><bs><bs><wait>",
         "autoinstall ds=nocloud-net\\;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ ---<wait>",
         "<f10><wait>"
-    ],
+    ]
     boot = "c"
     boot_wait = "5s"
 
