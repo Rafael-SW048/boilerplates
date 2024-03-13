@@ -95,7 +95,7 @@ source "proxmox" "ubuntu-server-focal-docker" {
     ssh_username = "admin"
 
     # (Option 1) Add your Password here
-    # ssh_password = "your-password"
+    ssh_password = "admin"
     # - or -
     # (Option 2) Add your Private SSH KEY file here
     # ssh_private_key_file = "~/.ssh/id_rsa"

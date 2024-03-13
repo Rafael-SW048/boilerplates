@@ -20,14 +20,14 @@ autoinstall:
       size: 0
   user-data:
     package_upgrade: false
-    timezone: Europe/Berlin
+    timezone: Asia/Jakarta
     users:
-      - name: your-user-name
+      - name: admin
         groups: [adm, sudo]
         lock-passwd: false
         sudo: ALL=(ALL) NOPASSWD:ALL
         shell: /bin/bash
-        # passwd: your-password
+        passwd: admin
         # - or -
         # ssh_authorized_keys:
         #   - your-ssh-key
