@@ -99,7 +99,7 @@ source "proxmox-iso" "ubuntu-server-focal-docker" {
     ssh_password = "admin"
     # - or -
     # (Option 2) Add your Private SSH KEY file here
-    # ssh_private_key_file = "~/.ssh/id_rsa"
+    ssh_private_key_file = "~/.ssh/id_rsa_ubuntu_server"
 
     # Raise the timeout, when installation takes longer
     ssh_timeout = "40m"
