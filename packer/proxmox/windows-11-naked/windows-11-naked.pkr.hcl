@@ -109,7 +109,7 @@ source "proxmox-iso" "windows-11-naked" {
     disks {
         type = "sata"
         disk_size = "${var.vm_disk_size}"
-        storage_pool = "local-lvm"
+        storage_pool = "local"
         format = "qcow2"
     }
 
