@@ -118,7 +118,6 @@ source "proxmox-iso" "windows-11-naked" {
         device = "sata3"
         iso_url = "./auto/Autounattend.iso"
         iso_checksum = "0D9B478536670B4767EDC5C93CF3182F0EBF37BD653AE7B462AD55D3DEB0A4AA"
-        iso_storage_pool = "local"
         unmount = true
     }
 
