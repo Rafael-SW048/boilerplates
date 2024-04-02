@@ -89,7 +89,7 @@ source "proxmox-iso" "windows-11-naked" {
     iso_file = "${var.iso_file}"
     // iso_checksum = "${var.iso_checksum}"
     iso_checksum = "C299F39A120EFAAEAFC4802C854CD67634643205D8272A4CF16B649277C07A12"
-    iso_storage_pool = "local-lvm"
+    iso_storage_pool = "local"
     unmount_iso = true
 
     # VM System Settings
