@@ -23,12 +23,12 @@ source "proxmox-iso" "ubuntu-server-focal-docker" {
     proxmox_url = "${var.proxmox_api_url}"
     username = "${var.proxmox_api_token_id}"
     token = "${var.proxmox_api_token_secret}"
+    node = "${var.proxmox_host}"
     # (Optional) Skip TLS Verification
-    insecure_skip_tls_verify = true
+    insecure_skip_tls_verify = "${var.proxmox_insecure_skip_tls_verify}"
     
     # VM General Settings
-    node = "pve"
-    vm_id = "400"
+    vm_id = "400" # Test Note: check if we comment this, will it still works?
     vm_name = "ubuntu-server-focal-docker"
     template_description = "Ubuntu Server Focal Image with Docker pre-installed"
 
@@ -54,7 +54,7 @@ source "proxmox-iso" "ubuntu-server-focal-docker" {
         // format = "qcow2"
         format = "raw"
         storage_pool = "local-lvm"
-        storage_pool_type = "lvm"
+        // storage_pool_type = "lvm"
         type = "virtio"
     }
 
@@ -99,7 +99,7 @@ source "proxmox-iso" "ubuntu-server-focal-docker" {
     ssh_password = "admin"
     # - or -
     # (Option 2) Add your Private SSH KEY file here
-    ssh_private_key_file = "~/.ssh/id_rsa_ubuntu_server"
+    // ssh_private_key_file = "~/.ssh/id_rsa_ubuntu_server"
 
     # Raise the timeout, when installation takes longer
     ssh_timeout = "40m"
