@@ -89,7 +89,7 @@ source "proxmox-iso" "windows-11-naked" {
     iso_file = "${var.iso_file}"
     // iso_checksum = "${var.iso_checksum}"
     iso_checksum = "C299F39A120EFAAEAFC4802C854CD67634643205D8272A4CF16B649277C07A12"
-    iso_storage_pool = "local"
+    // iso_storage_pool = "local"
     unmount_iso = true
 
     # VM System Settings
@@ -109,7 +109,7 @@ source "proxmox-iso" "windows-11-naked" {
     disks {
         type = "sata"
         disk_size = "${var.vm_disk_size}"
-        storage_pool = "local"
+        storage_pool = "local-lvm"
         format = "qcow2"
     }
 
