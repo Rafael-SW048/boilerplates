@@ -89,7 +89,7 @@ source "proxmox-iso" "windows-11-naked" {
     iso_file = "${var.iso_file}"
     // iso_checksum = "${var.iso_checksum}"
     iso_checksum = "C299F39A120EFAAEAFC4802C854CD67634643205D8272A4CF16B649277C07A12"
-    iso_storage_pool = "local"
+    iso_storage_pool = "local-lvm"
     unmount_iso = true
 
     # VM System Settings
@@ -118,7 +118,7 @@ source "proxmox-iso" "windows-11-naked" {
         device = "sata3"
         iso_url = "./auto/Autounattend.iso"
         iso_checksum = "0D9B478536670B4767EDC5C93CF3182F0EBF37BD653AE7B462AD55D3DEB0A4AA"
-        iso_storage_pool = "local"
+        iso_storage_pool = "local-lvm"
         unmount = true
     }
 
