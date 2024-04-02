@@ -118,13 +118,13 @@ source "proxmox-iso" "windows-11-naked" {
         device = "sata3"
         iso_url = "./auto/Autounattend.iso"
         iso_checksum = "0D9B478536670B4767EDC5C93CF3182F0EBF37BD653AE7B462AD55D3DEB0A4AA"
-        iso_storage_pool = "ISO-storage"
+        iso_storage_pool = "local"
         unmount = true
     }
 
     additional_iso_files {
         device = "sata4"
-        iso_url = "ISO-storage:iso/virtio-win-0.1.185.iso"
+        iso_url = "./auto/virtio-win-0.1.248.iso"
         iso_checksum = "D5B5739CF297F0538D263E30678D5A09BBA470A7C6BCBD8DFF74E44153F16549"
         unmount = true
     }
